@@ -1,0 +1,45 @@
+fr = open("dictionary.txt", "r+")
+
+
+def add(word):
+    z = 0
+    for line in fr:
+        line = line.replace("\n", "")
+        lt = line.split(",")
+        if lt[0] == word:
+            z = 1
+            print("该单词已添加到字典库")
+            a = input("是否添加多重释义？")
+            if a == "是":
+                lt.append(input("请输入释义："))
+                fr.writelines(",".join(lt) + "\n")
+            print("{}：{}".format(word, ",".join(lt[1:])))
+    if z == 0:
+        ls = []
+        ls.append(word)
+        ls.append(input("请输入释义："))
+        fr.writelines(",".join(ls) + "\n")
+        print("{}：{}".format(word, ",".join(ls[1:])))
+
+
+def search(word):
+    for line in fr:
+        line = line.replace("\n", "")
+        lt = line.split(",")
+        if word in lt[0]:
+            print("{}：{}".format(word, ",".join(lt[1:])))
+        else:
+            print("字典库中未找到这个单词")
+
+
+choice = input("请选择功能：1.添加；2.查询；3.退出")
+if choice == '1':
+    add(input("请输入添加的单词："))
+elif choice == '2':
+    search(input("请输入查询的单词："))
+elif choice == '3':
+    print("感谢使用")
+else:
+    print("输入有误")
+
+fr.close()

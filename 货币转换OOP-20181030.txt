@@ -1,0 +1,31 @@
+描述
+人民币和欧元是国际上两种重要货币体系，分别采用CNY和EUR符号表示。
+
+某个时间点，两种货币兑换关系为：1EUR=7.8942CNY。
+
+请采用OOP方式编写程序，计算两种货币的转换，人民币采用"CNY"符号表示，欧元采用"EUR"符号表示。
+
+当输入格式错误时，提示"格式错误"。
+
+提示：
+
+设计一个ConvertClass，用来表示转换对象。
+
+#ConvertCurrency.py
+class ConvertClass:
+    def __init__(self, c1, c2, ratio):
+        self.symbol_a = c1
+        self.symbol_b = c2
+        self.ratio = ratio
+    def Convert(self, c):
+        s = 0
+        if c[-3:] == self.symbol_a[-3:]:
+            s = eval(c[:-3])/self.ratio
+            print("{:.2f}{}".format(s, self.symbol_b))
+        elif c[-3:] == self.symbol_b[-3:]:
+            s = eval(c[:-3])*self.ratio
+            print("{:.2f}{}".format(s, self.symbol_a))
+        else:
+            print("格式错误")
+
+d = ConvertClass("CNY", "EUR", 7.8942).Convert(input())

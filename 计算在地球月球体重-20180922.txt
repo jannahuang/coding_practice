@@ -1,0 +1,7 @@
+#CuculateWeight.py
+import math
+weight = 0
+up = 0.5
+for i in range(10):
+    weight += up
+    print("第{}年体重在地球上共增加{:.2f}kg，在月球上共增加{:.2f}kg。".format(i+1, weight, weight*0.165 ))

@@ -1,0 +1,12 @@
+Num1 = eval(input("输入第一个整数："))
+Num2 = eval(input("输入第二个整数："))
+mod = 1
+a = Num1
+b = Num2
+while mod != 0:
+    mod = a % b
+    gys = b
+    a = b
+    b = mod
+gbs = Num1*Num2/gys
+print("最大公约数为{},最小公倍数为{}。".format(gys, gbs))

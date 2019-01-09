@@ -1,0 +1,11 @@
+#DrawSpiralSquare.py
+from turtle import fd, pencolor, seth, penup, pendown
+def DrawSpiralSquare(length,angle, time):
+    seth(angle)
+    pencolor("blue")
+    fd(length)
+    for i in range(1, time):
+        seth(angle)
+        fd(length*i)
+        angle += 90
+DrawSpiralSquare(5, 90, 50)

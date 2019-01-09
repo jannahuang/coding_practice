@@ -1,0 +1,10 @@
+txt = eval(input())
+try:
+    if type(txt) == type({'a':1}):
+        b = dict(txt)
+        d = {}
+        for item in b:
+            d[b.get(item, 0)] = item
+        print(d)
+except:
+    print(" ‰»Î¥ÌŒÛ")

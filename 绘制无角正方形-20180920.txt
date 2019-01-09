@@ -1,0 +1,16 @@
+from turtle import fd, pencolor, seth, penup, pendown
+def DrawSquare(N, draw):
+    pencolor("blue")
+    angle = ['90', '180', '-90', '-180']
+    a = 0
+    for i in range(4):
+        penup()
+        fd(N)
+        pendown()
+        fd(draw)
+        penup()
+        fd(N)
+        if a <3:
+            seth(eval(angle[a]))
+            a += 1
+DrawSquare(10, 50)

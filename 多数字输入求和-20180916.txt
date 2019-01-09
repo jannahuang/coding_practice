@@ -1,0 +1,6 @@
+add = 0
+txt = input()
+while txt != "":
+    add += eval(txt)
+    txt = input()
+print(add)

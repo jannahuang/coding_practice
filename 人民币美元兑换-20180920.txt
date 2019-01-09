@@ -1,0 +1,15 @@
+TempStr = input("请输入带单位金额：")
+if TempStr[-3:] in ['CNY', 'cny']:
+    U = eval(TempStr[:-3])/6
+    print("{:.2f}USD".format(U))
+elif TempStr[-3:] == '人民币':
+    U = eval(TempStr[:-3])/6
+    print("{:.2f}美元".format(U))
+elif TempStr[-3:] in ['USD', 'usd']:
+    C = eval(TempStr[:-3])*6
+    print("{:.2f}CNY".format(C))
+elif TempStr[-2:] == '美元':
+    C = eval(TempStr[:-3])*6
+    print("{:.2f}人民币".format(C))
+else:
+    print("wrong")

@@ -1,0 +1,16 @@
+fo = open("data.csv", "r", encoding="utf-8")
+org = []
+for line in fo:
+    line = line.replace("\n", "")
+    line = line.replace(" ", "")
+    org.append(line.split(","))
+upd = []
+for i in range(len(org)):
+    for j in range(len(org[0])):
+        upd.append([])
+        upd[j].append(org[len(org)-i-1][j])
+for i in range(upd.count([])):
+    upd.remove([])
+for i in range(len(upd)):
+    print(upd[i])
+fo.close()

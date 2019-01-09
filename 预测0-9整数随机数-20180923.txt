@@ -1,0 +1,14 @@
+import random
+bomb = random.randint(0, 9)
+str = eval(input("请输入一个0-9之间的整数："))
+N = 0
+while str != bomb:
+    if str > bomb:
+        print("遗憾，太大了")
+        N += 1
+        str = eval(input("请输入一个0-9之间的整数："))
+    elif str < bomb:
+        print("遗憾，太小了")
+        N += 1
+        str = eval(input("请输入一个0-9之间的整数："))
+print("预测{}次，你猜中了！".format(N+1))

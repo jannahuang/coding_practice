@@ -1,0 +1,15 @@
+money = input()
+if money[-3:] in ['CNY', '人民币']:
+    E = eval(money[:-3])/7.8942
+    if money[-3:] == 'CNY':
+        print("{:.2f}EUR".format(E))
+    else:
+        print("{:.2f}欧元".format(E))
+elif money[-3:] == 'EUR':
+    C = eval(money[:-3])*7.8942
+    print("{:.2f}CNY".format(C))
+elif money[-2:] == '欧元':
+    C = eval(money[:-2])*7.8942
+    print("{:.2f}人民币".format(C))
+else:
+    print("格式错误")

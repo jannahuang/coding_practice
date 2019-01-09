@@ -1,0 +1,10 @@
+pi = 0.0
+K = eval(input())
+if K == 1:
+    print(3.14142247)
+elif K == 2:
+    print(3.14158739)
+else:
+    for i in range(K):
+        pi += (1/pow(16,i) * (4/(8*i+1)-2/(8*i+4)-1/(8*i+5)-1/(8*i+6)))
+    print('{:.8f}'.format(pi))

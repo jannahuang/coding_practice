@@ -1,0 +1,18 @@
+×Ô±à£º
+number = input()
+ls = number.split()
+i = 0
+add = 0
+while i < len(ls):
+    add += eval(ls[i])
+    i += 1
+print("{:.1f}".format(add/len(ls)))
+
+
+²Î¿¼´úÂë£º
+txt = input()
+ls = txt.split()
+sum = 0
+for item in ls:
+    sum += eval(item)
+print("{:.1f}".format(sum/len(ls)))

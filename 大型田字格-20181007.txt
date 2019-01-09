@@ -1,0 +1,17 @@
+def ls1(a):
+    print("£«", end='')
+    for i in range(a):
+        print("{}{}".format("£­"*4, "£«"), end='')
+    print("\n")
+def ls2(a):
+    print("£ü", end='')
+    for i in range(a):
+        print("{}{}".format("¡¡" * 4, "£ü"), end='')
+    print("\n")
+def ls3(a):
+    for i in range(a):
+        ls1(a)
+        for i in range(a):
+            ls2(a)
+    ls1(a)
+ls3(4)

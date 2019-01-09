@@ -1,0 +1,8 @@
+import turtle
+turtle.pencolor("blue")
+turtle.fd(200)
+turtle.seth(120)
+turtle.fd(200)
+turtle.seth(-120)
+turtle.fd(200)
+turtle.done
